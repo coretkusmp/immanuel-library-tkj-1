@@ -1,4 +1,11 @@
 <?php 
+require __DIR__ . "/../../repositories/book-repository.php"; 
+
+$categories = getCategories();
+$authors = getAuthors();
+?>
+
+<?php 
 $pageTitle = "Tambah Buku";
 $pageSubtitle = "Lengkapi data buku, kategori, dan penulis";
 ?>
@@ -12,11 +19,6 @@ $pageSubtitle = "Lengkapi data buku, kategori, dan penulis";
   <link rel="stylesheet" href="../../styles/books/create.css">
 </head>
 <body>
-  <?php
-  // Data kategori & penulis dummy untuk mengisi dropdown/checkbox di form
-  $categories = ["Fiksi", "Sains", "Sejarah", "Teknologi"];
-  $authors = ["Andrea Hirata", "Tere Liye", "J.K. Rowling", "Pramoedya Ananta Toer", "Sapardi Djoko Damono"];
-  ?>
   <div class="app-shell">
 
   <?php require __DIR__ . "/../../components/admin/sidebar.php"?>
