@@ -1,4 +1,10 @@
 <?php 
+require __DIR__ . "/../../repositories/category-repository.php";
+
+$category = getCategory();
+?>
+
+<?php 
 $pageTitle = "Edit Kategori";
 $pageSubtitle = "perbarui data kategori";
 ?>
@@ -26,7 +32,7 @@ $pageSubtitle = "perbarui data kategori";
     <main class="app-main">
     <?php require __DIR__ . "/../../components/admin/topbar.php"?>
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/categories/update.php">
           <input type="hidden" name="id" value="<?= $category['id'] ?>">
           <div class="form-card">
             <div class="form-section-title">Data Kategori</div>
@@ -41,7 +47,7 @@ $pageSubtitle = "perbarui data kategori";
 
             <div class="form-actions">
               <a href="index.php" class="btn btn-outline">Batal</a>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+              <button name="update" type="submit" class="btn btn-primary">Simpan Perubahan</button>
             </div>
           </div>
         </form>

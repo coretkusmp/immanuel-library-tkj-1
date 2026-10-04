@@ -34,7 +34,7 @@ $pageSubtitle = "Buat kategori baru untuk mengelompokkan buku";
 
             <div class="form-actions">
               <a href="index.php" class="btn btn-outline">Batal</a>
-              <button type="submit" class="btn btn-primary">Simpan Kategori</button>
+              <button name="store" type="submit" class="btn btn-primary">Simpan Kategori</button>
             </div>
           </div>
         </form>
