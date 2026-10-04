@@ -1,4 +1,12 @@
 <?php 
+require __DIR__ . "/../../repositories/user-repository.php";
+
+$profile = getProfile();
+
+$user = getuser();
+?>
+
+<?php 
 $pageTitle = "Profil Saya";
 $pageSubtitle = "kelola data akun dan profil Anda";
 ?>
@@ -12,21 +20,7 @@ $pageSubtitle = "kelola data akun dan profil Anda";
   <link rel="stylesheet" href="../../styles/profile/edit.css">
 </head>
 <body>
-  <?php
-  $user = [
-      "id"    => 1,
-      "name"  => "Budi Santoso",
-      "email" => "budi.santoso@siswa.ski.sch.id",
-      "role"  => "member",
-  ];
 
-  $profile = [
-      "user_id" => 1,
-      "phone"   => "0812-3456-7890",
-      "address" => "Jl. Merdeka No. 21, Pontianak, Kalimantan Barat",
-      "bio"     => "Murid kelas XI TKJ yang gemar membaca novel fiksi dan buku pengembangan diri.",
-  ];
-  ?>
   <div class="app-shell">
 
   <?php require __DIR__ . "/../../components/admin/sidebar.php"?>
@@ -36,7 +30,7 @@ $pageSubtitle = "kelola data akun dan profil Anda";
     <?php require __DIR__ . "/../../components/admin/topbar.php"?>
 
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/profile/update.php">
           <div class="form-card" style="margin-bottom:20px;">
             <div class="form-section-title">Data Akun</div>
             <div class="form-row">
@@ -72,7 +66,7 @@ $pageSubtitle = "kelola data akun dan profil Anda";
             </div>
             <div class="form-actions">
               <button type="button" class="btn btn-outline">Batal</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+              <button name="update" type="submit" class="btn btn-primary">Simpan Perubahan</button>
             </div>
           </div>
         </form>
