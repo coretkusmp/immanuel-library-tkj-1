@@ -1,3 +1,8 @@
+<?php 
+$pageTitle = "Tambah Pengguna";
+$pageSubtitle = "Buat akun pengguna baru beserta perannya";
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -8,23 +13,12 @@
 </head>
 <body>
   <div class="app-shell">
-    
+
   <?php require __DIR__ . "/../../components/admin/sidebar.php"?>
 
     <main class="app-main">
-    <header class="app-topbar">
-      <div class="page-title">
-        <h1>Tambah Pengguna</h1>
-        <p>Buat akun pengguna baru beserta perannya</p>
-      </div>
-      <div class="topbar-user">
-        <span class="avatar">BS</span>
-        <div>
-          Budi Santoso<br>
-          <span class="badge badge-member" style="margin-top:2px;">Member</span>
-        </div>
-      </div>
-    </header>
+      
+    <?php require __DIR__ . "/../../components/admin/topbar.php"?>
 
       <div class="app-content">
         <form method="" action="">

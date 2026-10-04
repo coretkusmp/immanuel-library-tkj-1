@@ -1,3 +1,8 @@
+<?php 
+$pageTitle = "Edit Pengguna";
+$pageSubtitle = "perbarui data dan role pengguna";
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -16,23 +21,12 @@
   ];
   ?>
   <div class="app-shell">
-    
+
   <?php require __DIR__ . "/../../components/admin/sidebar.php"?>
 
     <main class="app-main">
-    <header class="app-topbar">
-      <div class="page-title">
-        <h1>Edit Pengguna</h1>
-        <p>Perbarui data dan role pengguna</p>
-      </div>
-      <div class="topbar-user">
-        <span class="avatar">BS</span>
-        <div>
-          Budi Santoso<br>
-          <span class="badge badge-member" style="margin-top:2px;">Member</span>
-        </div>
-      </div>
-    </header>
+
+    <?php require __DIR__ . "/../../components/admin/topbar.php"?>
 
       <div class="app-content">
         <form method="" action="">
