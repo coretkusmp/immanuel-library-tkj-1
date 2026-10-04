@@ -1,4 +1,10 @@
 <?php 
+require __DIR__ . "/../../repositories/category-repository.php";
+
+$categories = getCategories();
+?>
+
+<?php 
 $pageTitle = "Manajemen Kategori";
 $pageSubtitle = "Kelola kategori untuk mengelompokkan buku";
 ?>
@@ -45,6 +51,7 @@ $pageSubtitle = "Kelola kategori untuk mengelompokkan buku";
               </tr>
             </thead>
             <tbody>
+              <?php foreach($categories as $index => $category):?>
               <tr>
                 <td>
                   <div class="cell-primary">
@@ -61,6 +68,7 @@ $pageSubtitle = "Kelola kategori untuk mengelompokkan buku";
                   </div>
                 </td>
               </tr>
+              <?php endforeach?>
             </tbody>
           </table>
         </div>
