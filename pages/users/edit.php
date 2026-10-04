@@ -29,7 +29,7 @@ $pageSubtitle = "perbarui data dan role pengguna";
     <?php require __DIR__ . "/../../components/admin/topbar.php"?>
 
       <div class="app-content">
-        <form method="" action="">
+        <form method="post" action="../../actions/users/update.php">
           <input type="hidden" name="id" value="<?= $user['id'] ?>">
           <div class="form-card">
             <div class="form-section-title">Data Pengguna</div>
@@ -53,7 +53,7 @@ $pageSubtitle = "perbarui data dan role pengguna";
 
             <div class="form-actions">
               <a href="index.php" class="btn btn-outline">Batal</a>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+              <button name="update" type="submit" class="btn btn-primary">Simpan Perubahan</button>
             </div>
           </div>
         </form>

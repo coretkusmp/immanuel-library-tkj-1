@@ -29,7 +29,7 @@ $pageSubtitle = "Daftar seluruh pengguna beserta perannya (role)";
 
       <div class="app-content">
         <div class="toolbar">
-          <form method="" action="" class="toolbar-filters">
+          <form method="post" action="" class="toolbar-filters">
             <div class="search-box">
               <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
               <input type="text" name="search" class="search-input" placeholder="Cari nama atau email pengguna...">
@@ -69,7 +69,7 @@ $pageSubtitle = "Daftar seluruh pengguna beserta perannya (role)";
                 <td>
                   <div class="cell-actions">
                     <a href="edit.php?id=<?= $user['id'] ?>" class="btn btn-outline btn-sm">Edit</a>
-                    <a href="#" class="btn btn-danger btn-sm">Hapus</a>
+                    <a href="../../actions/users/destroy.php" class="btn btn-danger btn-sm">Hapus</a>
                   </div>
                 </td>
               </tr>
