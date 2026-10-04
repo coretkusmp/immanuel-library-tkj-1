@@ -1,5 +1,7 @@
 <?php
-function getBooks() {
+$a = "hello something";
+function getBooks() 
+{
   $books = [
     [
       "id" => 1,
