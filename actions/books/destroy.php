@@ -1,6 +1,6 @@
 <?php
-if (isset($_POST['id'])) {
-  $id = $_POST['id'];
+if (isset($_GET['id'])) {
+  $id = $_GET['id'];
   echo "Buku dengan id " . htmlspecialchars($id) . " dihapus.";
 } else {
   echo "ID tidak ditemukan.";

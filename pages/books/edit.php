@@ -1,10 +1,13 @@
 <?php
 require __DIR__ . "/../../repositories/book-repository.php";
+
+$book = getBook();
+?>
+
+<?php 
 require __DIR__ . "/../../repositories/author-repository.php";
 require __DIR__ . "/../../repositories/category-repository.php";
 
-
-$book = getBook();
 $categories = getCategories();
 $authors = getAuthors();
 ?>

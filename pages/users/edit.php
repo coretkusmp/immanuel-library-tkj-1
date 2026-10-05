@@ -1,4 +1,11 @@
 <?php 
+require __DIR__ . "/../../repositories/user-repository.php";
+
+$user = getUser();
+?>
+
+
+<?php 
 $pageTitle = "Edit Pengguna";
 $pageSubtitle = "perbarui data dan role pengguna";
 ?>
@@ -12,14 +19,7 @@ $pageSubtitle = "perbarui data dan role pengguna";
   <link rel="stylesheet" href="../../styles/users/edit.css">
 </head>
 <body>
-  <?php
-  $user = [
-      "id"    => 2,
-      "name"  => "Budi Santoso",
-      "email" => "budi.santoso@siswa.ski.sch.id",
-      "role"  => "member",
-  ];
-  ?>
+
   <div class="app-shell">
 
   <?php require __DIR__ . "/../../components/admin/sidebar.php"?>

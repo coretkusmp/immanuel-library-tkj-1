@@ -61,13 +61,3 @@ function getBook(){
 
   return $book;
 }
-
-function getCategories(){
-  $categories = ["Fiksi", "Sains", "Sejarah", "Teknologi"];
-  return $categories;
-}
-
-function getAuthors(){
-  $authors = ["Andrea Hirata", "Tere Liye", "J.K. Rowling", "Pramoedya Ananta Toer", "Sapardi Djoko Damono"];
-  return $authors;
-}
