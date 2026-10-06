@@ -63,7 +63,7 @@ $pageSubtitle = "Perbarui data buku, kategori, dan penulis";
                 <label for="category_id">Kategori</label>
                 <select id="category_id" name="category_id">
                   <?php foreach ($categories as $index => $category): ?>
-                    <option value="<?= $category['id'] ?>" <?= $category['id'] === $book['category'] ? 'selected' : '' ?>><?= $category['name'] ?></option>
+                    <option value="<?= $category['id'] ?>" <?= $category['name'] === $book['category'] ? 'selected' : '' ?>><?= $category['name'] ?></option>
                   <?php endforeach; ?>
                 </select>
               </div>
@@ -81,7 +81,7 @@ $pageSubtitle = "Perbarui data buku, kategori, dan penulis";
               <div class="checkbox-grid">
                 <?php foreach ($authors as $author): ?>
                   <label class="checkbox-item">
-                    <input type="checkbox" name="author_ids[]" value="<?= $author['id'] ?>" <?= in_array($author['id'], $book['author_ids'] ?? []) ? 'checked' : '' ?>>
+                    <input type="checkbox" name="author_ids[]" value="<?= $author['id'] ?>" <?= in_array($author['id'], $book['authors'] ?? []) ? 'checked' : '' ?>>
                     <?= $author['name'] ?>
                   </label>
                 <?php endforeach; ?>

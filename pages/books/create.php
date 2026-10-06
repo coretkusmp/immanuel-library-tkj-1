@@ -1,5 +1,7 @@
 <?php 
 require __DIR__ . "/../../repositories/book-repository.php"; 
+require __DIR__ . "/../../repositories/category-repository.php"; 
+require __DIR__ . "/../../repositories/author-repository.php"; 
 
 $categories = getCategories();
 $authors = getAuthors();
@@ -53,7 +55,7 @@ $pageSubtitle = "Lengkapi data buku, kategori, dan penulis";
                 <label for="category_id">Kategori</label>
                 <select id="category_id" name="category_id">
                   <?php foreach ($categories as $index => $category): ?>
-                    <option value="<?= $index + 1 ?>"><?= $category ?></option>
+                    <option value="<?= $category['id']?>"><?= $category['name'] ?></option>
                   <?php endforeach; ?>
                 </select>
               </div>
@@ -69,10 +71,10 @@ $pageSubtitle = "Lengkapi data buku, kategori, dan penulis";
             <div class="form-group">
               <label>Pilih Penulis (bisa lebih dari satu)</label>
               <div class="checkbox-grid">
-                <?php foreach ($authors as $index => $authorName): ?>
+                <?php foreach ($authors as $index => $author): ?>
                   <label class="checkbox-item">
-                    <input type="checkbox" name="author_ids[]" value="<?= $index + 1 ?>">
-                    <?= $authorName ?>
+                    <input type="checkbox" name="author_ids[]" value="<?= $author['id'] ?>">
+                    <?= $author['name'] ?>
                   </label>
                 <?php endforeach; ?>
               </div>

@@ -3,7 +3,7 @@ require __DIR__ . "/../../repositories/user-repository.php";
 
 $profile = getProfile();
 
-$user = getuser();
+$user = getUser();
 ?>
 
 <?php 
